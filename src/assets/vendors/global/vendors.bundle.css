@@ -3918,7 +3918,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("images/owl.carousel/owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;

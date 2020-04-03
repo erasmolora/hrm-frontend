@@ -1,14 +1,20 @@
 import React from 'react';
-import './App.css';
-import Home from './Templates/Home';
+import { Route, Switch } from 'react-router-dom';
+import Login from './Templates/Login';
+import Organization from './Templates/Organization';
+import SignUp from './Templates/SignUp';
+import Dashboard from './Templates/Base';
 
 
-class App extends React.Component {
-  render() {
-    return (
-      <Home></Home>
-    );
-  }
+export default function App() {
+  return (
+    <Switch>
+      <Route path="/" exact component={Login} />
+      <Route path="/signup" exact component={SignUp} />
+      <Route path="/organization/" exact component={Organization} />
+      <Route path="/organization/:organizationId">
+        <Dashboard></Dashboard> 
+      </Route>
+    </Switch>
+  );
 }
-
-export default App;

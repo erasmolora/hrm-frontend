@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import NavItem from './Atoms/NavItem';
+import NavItem from '../Atoms/NavItem';
 
 
 class Nav extends React.Component {
