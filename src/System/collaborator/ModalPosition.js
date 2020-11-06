@@ -6,7 +6,6 @@ import { useQuery, useMutation } from 'react-apollo';
 import { useParams } from 'react-router-dom';
 import { gql } from 'apollo-boost';
 import CreatableSelect from 'react-select/creatable';
-import Select from 'react-select';
 
 const MUTATE_POSITION = gql`
   mutation createPosition(
@@ -76,7 +75,7 @@ export default function ModalPosition(props) {
   const [isLoading, setLoading] = useState(false);
   const [organizationUnit, setOrganizationUnit] = useState('');
 
-  const { loading, error, data } = useQuery(QUERY, { variables: { organizationId } });
+  const { loading, data } = useQuery(QUERY, { variables: { organizationId } });
   const [createPosition] = useMutation(MUTATE_POSITION);
   const [createLevel] = useMutation(CREATE_LEVEL, { onCompleted: () => { setLoading(false); } });
   const [createOrganizationUnit] = useMutation(CREATE_ORGANIZATION_UNIT, { onCompleted() { setLoading(false); } });

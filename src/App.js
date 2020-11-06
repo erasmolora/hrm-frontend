@@ -12,9 +12,7 @@ export default function App() {
       <Route path="/" exact component={Login} />
       <Route path="/signup" exact component={SignUp} />
       <Route path="/organization/" exact component={Organization} />
-      <Route path="/organization/:organizationId">
-        <Dashboard></Dashboard> 
-      </Route>
+      <Route path="/organization/:organizationId" component={Dashboard} />
     </Switch>
   );
 }
